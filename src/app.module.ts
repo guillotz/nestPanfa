@@ -6,13 +6,14 @@ import { AppService } from './app.service';
 import { typeOrmConfig } from './config/typeorm.config';
 import { UserModule } from './modules/user/user.module';
 import { ProductoModule } from './modules/producto/producto.module';
+import { ComboModule } from './modules/combo/combo.module';
 
 @ApiTags('App Module')
 @Module({
   imports: [
     TypeOrmModule.forRoot(typeOrmConfig), 
     UserModule, 
-    ProductoModule
+    ProductoModule, ComboModule
   ],
   controllers: [AppController],
   providers: [AppService],
